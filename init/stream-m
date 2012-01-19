@@ -62,7 +62,7 @@ if start-stop-daemon --start --oknodo --exec $DAEMON -b --chuid recode ; then
 
   stop)
     log_daemon_msg "Stopping $DESC" "$NAME"
-    if start-stop-daemon --stop --oknodo --exec $DAEMON --retry 30 ; then
+    if start-stop-daemon --stop --oknodo --retry 30 --pidfile $PIDFILE ; then
         log_end_msg 0
     else
         log_end_msg 1
