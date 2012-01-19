@@ -1,2 +1,3 @@
 #!/bin/bash
+cd /usr/lib/stream-m
 java -cp /usr/lib/stream-m/lib/stream-m.jar StreamingServer /etc/stream-m.conf
